@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="120" viewBox="0 0 560 120" role="img" aria-label="Sky Browser">
+  <!-- Sky Browser wordmark — PLACEHOLDER using a system font stack.
+       Replace with a drawn logo-text (paths) before v0.1 (see docs/branding.md).
+       Suggested custom-wordmark font: Inter (SIL OFL) or a geometric sans. -->
+  <text x="0" y="84" font-family="Inter, 'Segoe UI', system-ui, -apple-system, sans-serif"
+        font-size="72" font-weight="700" letter-spacing="1" fill="#0b4a9e">Sky Browser</text>
+</svg>

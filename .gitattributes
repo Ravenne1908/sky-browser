@@ -1,0 +1,19 @@
+# Normalize all text files to LF in the repo AND in the working tree.
+# Shell scripts must stay LF-only to run reliably in MozillaBuild/Git Bash on
+# Windows; and upstream build machinery prefers LF throughout.
+* text=auto eol=lf
+
+# Explicit for clarity
+*.sh   text eol=lf
+*.js   text eol=lf
+*.md   text eol=lf
+*.yml  text eol=lf
+*.svg  text eol=lf
+
+# Future binary assets (branding, bundled extensions)
+*.png  binary
+*.ico  binary
+*.icns binary
+*.xpi  binary
+*.zip  binary
+*.gz   binary

@@ -1,0 +1,10 @@
+# Sky Browser patch series — applied in order by scripts/apply-patches.sh.
+# Blank lines and lines starting with '#' are ignored.
+#
+# Discipline (see patches/README.md):
+#   one patch = one concern, smallest possible diff, rebase-friendly.
+# Create patches with scripts/new-patch.sh from your .build/upstream tree.
+
+# (empty for now — first patches land with milestone M1, see docs/branding.md:
+#  - 001-branding-skybrowser.patch   Sky Browser branding directory + mozconfig switch
+#  - 002-default-prefs.patch         ship prefs/sky-browser.js as browser defaults)

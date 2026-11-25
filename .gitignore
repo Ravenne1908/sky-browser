@@ -1,0 +1,24 @@
+# Upstream source tree & build artifacts (fetched by scripts/setup.sh)
+.build/
+obj*/
+obj-*
+
+# Never commit upstream source — our repo is only the Sky Browser delta
+mozilla/
+firefox/
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs & temp files
+*.log
+*.tmp
+*.bak

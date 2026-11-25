@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Sky Browser logo">
+  <!-- Sky Browser app icon / logo.
+       A white contrail-swoosh traces an "S" across a sky gradient.
+       Palette: Sky Deep #0B4A9E, Sky Azure #2F8FE0, Sky Horizon #A5E3FB, Cloud #FFFFFF. -->
+  <defs>
+    <linearGradient id="skyGradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0b4a9e"/>
+      <stop offset="0.6" stop-color="#2f8fe0"/>
+      <stop offset="1" stop-color="#a5e3fb"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#skyGradient)"/>
+  <path d="M96 352 C 168 240, 240 228, 300 264 C 356 296, 408 288, 420 232"
+        fill="none" stroke="#ffffff" stroke-width="42" stroke-linecap="round"/>
+  <circle cx="132" cy="132" r="13" fill="#ffffff" opacity="0.5"/>
+  <circle cx="180" cy="104" r="7" fill="#ffffff" opacity="0.35"/>
+</svg>

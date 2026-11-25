@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 Discussions & questions
+    url: https://github.com/ravennelucas1908-max/sky-browser/discussions
+    about: Usage questions, ideas without a concrete proposal, and general chat.
+  - name: 🔒 Security reports
+    url: https://github.com/ravennelucas1908-max/sky-browser/security
+    about: Vulnerabilities are reported privately — never as a public issue (see SECURITY.md).
+  - name: 🇲🇿 Upstream engine bugs
+    url: https://bugzilla.mozilla.org/
+    about: Bugs that also reproduce in stock Firefox belong to Mozilla — report them there (and link them here so we can track the rebase).

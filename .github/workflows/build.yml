@@ -1,0 +1,55 @@
+# Sky Browser — full release build.
+#
+# A Firefox/Gecko build is FAR beyond the free GitHub-hosted runners
+# (roughly 40+ GB disk, several hours, 16 GB RAM). This workflow is written
+# for a SELF-HOSTED runner (your own PC or a server) labeled [self-hosted, Linux].
+#
+# To enable (see docs/release-process.md):
+#   1. GitHub repo → Settings → Actions → Runners → New self-hosted runner,
+#      follow the setup on a machine that has run ./mach bootstrap once.
+#   2. Uncomment the trigger(s) below.
+#   3. Run it once via the Actions tab ("Run workflow") to validate.
+
+name: Release build
+
+on:
+  workflow_dispatch:
+  # push:
+  #   tags: ["v*"]
+
+jobs:
+  build-linux:
+    runs-on: [self-hosted, Linux]
+    timeout-minutes: 720
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch pinned upstream source
+        run: ./scripts/setup.sh
+
+      - name: Apply Sky Browser patch series
+        run: ./scripts/apply-patches.sh
+
+      - name: Build & package
+        run: ./scripts/build.sh --package
+
+      - name: Upload distributables
+        uses: actions/upload-artifact@v4
+        with:
+          name: sky-browser-linux-x86_64
+          path: .build/obj-sky/dist/*.tar.*
+          if-no-files-found: error
+
+  # build-windows:
+  #   runs-on: [self-hosted, Windows]
+  #   timeout-minutes: 720
+  #   steps:
+  #     - uses: actions/checkout@v4
+  #     - run: bash scripts/setup.sh           # inside MozillaBuild's bash
+  #     - run: bash scripts/apply-patches.sh
+  #     - run: bash scripts/build.sh --package
+  #     - uses: actions/upload-artifact@v4
+  #       with:
+  #         name: sky-browser-windows-x64
+  #         path: .build/obj-sky/dist/install/*.installer.*
+  #         if-no-files-found: error

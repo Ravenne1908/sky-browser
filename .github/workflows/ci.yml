@@ -1,0 +1,48 @@
+# Sky Browser CI — fast checks on every push/PR.
+# These run on free GitHub-hosted runners: we deliberately do NOT try to
+# build the browser here (a full build needs ~40 GB and hours of compute).
+
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Syntax-check shell scripts
+        run: |
+          for f in scripts/*.sh; do
+            bash -n "$f" && echo "OK: $f"
+          done
+
+      - name: Syntax-check default preferences (valid JS)
+        run: node --check prefs/sky-browser.js && echo "OK: prefs/sky-browser.js"
+
+      - name: Patch series references existing patch files
+        run: |
+          status=0
+          while IFS= read -r line; do
+            case "$line" in ""|"#"*) continue ;; esac
+            if [ ! -f "patches/$line" ]; then
+              echo "ERROR: patches/series lists '$line' but patches/$line does not exist"
+              status=1
+            fi
+          done < patches/series
+          exit $status
+
+      - name: Pinned upstream tag still exists on Mozilla's repo
+        run: |
+          source upstream.env
+          echo "Checking $UPSTREAM_TAG on $UPSTREAM_REPO ..."
+          if git ls-remote --tags "$UPSTREAM_REPO" "refs/tags/$UPSTREAM_TAG" | grep -q .; then
+            echo "OK: tag $UPSTREAM_TAG found"
+          else
+            echo "ERROR: pinned tag $UPSTREAM_TAG not found — check upstream.env"
+            exit 1
+          fi

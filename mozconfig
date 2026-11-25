@@ -1,0 +1,31 @@
+# Sky Browser build configuration.
+# Copied into the upstream tree as ./mozconfig by scripts/setup.sh — mach picks
+# it up automatically.
+# Reference: https://firefox-source-docs.mozilla.org/build/buildsystem/mozconfigs.html
+
+# Keep build artifacts OUT of the upstream tree, inside .build/ (git-ignored).
+mk_add_options MOZ_OBJDIR=@TOPSRCDIR@/../obj-sky
+
+# Desktop browser.
+ac_add_options --enable-application=browser
+
+# Trademark-safe generic branding until Sky Browser's own branding directory
+# exists (milestone M1 — see docs/branding.md).
+# When our branding dir lands this becomes: --with-branding=browser/branding/skybrowser
+ac_add_options --with-branding=browser/branding/unofficial
+
+# Sky Browser ships no in-app updater in v0.x — releases come from GitHub
+# (docs/decisions/0003-no-in-house-updater-v0.md).
+ac_add_options --disable-updater
+
+# Faster builds: skip the enormous test suite. Remove for release builds if we
+# ever want `mach test` coverage in CI.
+ac_add_options --disable-tests
+
+# --- Development conveniences (comment out for release builds) ---
+
+# Debug build: much slower, but real backtraces and assertions.
+# ac_add_options --enable-debug
+
+# Enable the debug menu & devtools conveniences if needed during bring-up.
+# ac_add_options --enable-debug-symbols
