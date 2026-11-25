@@ -22,7 +22,8 @@ jobs:
           done
 
       - name: Syntax-check default preferences (valid JS)
-        run: node --check prefs/sky-browser.js && echo "OK: prefs/sky-browser.js"
+        run: |
+          node --check prefs/sky-browser.js && echo "OK: prefs/sky-browser.js"
 
       - name: Patch series references existing patch files
         run: |
