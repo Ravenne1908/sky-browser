@@ -49,6 +49,10 @@ discussion qui mérite d'avoir lieu.
 
 - ✅ Infrastructure de build sur la base Firefox ESR 153.8.0 (épinglée)
 - ✅ Préférences par défaut revues et documentées
+- 🧪 **Prototype d'interface** — [`preview/electron`](preview/README.md) :
+  un mock Electron de l'interface Sky Browser (onglets, page d'accueil,
+  identité), lançable en quelques secondes pendant que le vrai build Firefox
+  mûrit. Ce n'est **pas** le navigateur basé sur Firefox.
 - ✅ Outillage de patchs en série (divergence d'avec Firefox minimale et auditable)
 - 🚧 Identité : logo provisoire aujourd'hui, patch de rebranding complet ensuite
 - 🚧 Premiers binaires pour Windows et Linux

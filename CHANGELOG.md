@@ -23,3 +23,6 @@ Every release entry must state the upstream Firefox ESR tag it is built from
     compliance, release process, architecture decision records;
   - GitHub project files: CI workflow, release-build workflow (self-hosted),
     issue/PR templates, security policy, code of conduct, license (MPL-2.0).
+  - UI prototype (`preview/electron`): an Electron-based mock of the Sky
+    Browser interface (tabs, toolbar, branded start page, DuckDuckGo search)
+    for early look & feel testing — explicitly not the Firefox-based build.

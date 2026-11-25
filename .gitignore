@@ -18,6 +18,9 @@ desktop.ini
 *.swp
 *.swo
 
+# Node (preview/electron prototype)
+node_modules/
+
 # Logs & temp files
 *.log
 *.tmp

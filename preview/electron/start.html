@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Nouvel onglet</title>
+  <style>
+    body {
+      margin: 0; min-height: 100vh;
+      display: flex; align-items: center; justify-content: center;
+      background: linear-gradient(180deg, #dceefc 0%, #a5e3fb 45%, #2f8fe0 100%);
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      color: #0b2d5c;
+    }
+    main { text-align: center; padding: 40px 20px; width: 100%; max-width: 560px; }
+    h1 { margin: 18px 0 4px; font-size: 40px; letter-spacing: 1px; }
+    .tagline { margin: 0 0 28px; font-size: 14px; color: #123a6b; opacity: .85; }
+    input#q {
+      width: 100%; padding: 14px 22px; font-size: 16px;
+      border: 0; border-radius: 999px; outline: none;
+      box-shadow: 0 8px 24px rgba(11, 45, 92, .25);
+    }
+    .links { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 28px; }
+    .links a {
+      background: rgba(255,255,255,.75); padding: 12px; border-radius: 12px;
+      text-decoration: none; color: #0b4a9e; font-weight: 600; font-size: 14px;
+    }
+    .links a:hover { background: #fff; }
+    .note { margin-top: 30px; font-size: 12px; color: rgba(11, 45, 92, .8); line-height: 1.5; }
+  </style>
+</head>
+<body>
+  <main>
+    <svg viewBox="0 0 512 512" width="86" height="86" aria-hidden="true">
+      <defs>
+        <linearGradient id="skyGradient" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#0b4a9e"/>
+          <stop offset="0.6" stop-color="#2f8fe0"/>
+          <stop offset="1" stop-color="#a5e3fb"/>
+        </linearGradient>
+      </defs>
+      <rect width="512" height="512" rx="112" fill="url(#skyGradient)"/>
+      <path d="M96 352 C 168 240, 240 228, 300 264 C 356 296, 408 288, 420 232"
+            fill="none" stroke="#ffffff" stroke-width="42" stroke-linecap="round"/>
+      <circle cx="132" cy="132" r="13" fill="#ffffff" opacity="0.5"/>
+      <circle cx="180" cy="104" r="7" fill="#ffffff" opacity="0.35"/>
+    </svg>
+    <h1>Sky Browser</h1>
+    <p class="tagline">Le web, en silence. Recherche via DuckDuckGo — aucun pistage.</p>
+
+    <form id="s">
+      <input id="q" type="text" placeholder="Rechercher sur DuckDuckGo…" autofocus>
+    </form>
+
+    <nav class="links">
+      <a href="https://duckduckgo.com">DuckDuckGo</a>
+      <a href="https://fr.wikipedia.org">Wikipédia</a>
+      <a href="https://github.com/ravennelucas1908-max/sky-browser">GitHub du projet</a>
+      <a href="https://www.mozilla.org/fr/firefox/">Firefox (notre base)</a>
+    </nav>
+
+    <p class="note">
+      Prototype d'interface (Electron) — le vrai Sky Browser sera un fork de
+      Firefox ESR : télémétrie coupée, anti-pistage strict, allégé,
+      open source (MPL-2.0).
+    </p>
+  </main>
+
+  <script>
+    document.getElementById('s').addEventListener('submit', function (e) {
+      e.preventDefault()
+      var q = document.getElementById('q').value.trim()
+      if (q) location.href = 'https://duckduckgo.com/?q=' + encodeURIComponent(q)
+    })
+  </script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "name": "sky-browser-preview",
+  "productName": "Sky Browser (prototype)",
+  "version": "0.0.1",
+  "description": "Sky Browser UI prototype - Electron mock, NOT the Firefox-based build. See preview/README.md.",
+  "main": "main.js",
+  "license": "MPL-2.0",
+  "private": true,
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^45.5.0"
+  }
+}

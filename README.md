@@ -52,6 +52,10 @@ notified of the first release.
 
 - ✅ Build infrastructure pinning a privacy-hardened Firefox ESR 153.8.0 base
 - ✅ Default preferences reviewed and documented
+- 🧪 **UI prototype** — [`preview/electron`](preview/README.md): an
+  Electron mock of the Sky Browser interface (tabs, start page, identity),
+  launchable in seconds while the real Firefox build matures. **Not** the
+  Firefox-based browser.
 - ✅ Patch-series tooling (minimal, auditable divergence from upstream)
 - 🚧 Branding: placeholder logo today, full rebrand patch next
 - 🚧 First binary releases for Windows and Linux
