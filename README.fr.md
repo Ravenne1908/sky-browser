@@ -64,7 +64,7 @@ et sécurité ([pourquoi](docs/decisions/0002-esr-channel.md)).
 ## Téléchargement
 
 Dès la première version, les installateurs seront disponibles sur la
-[page Releases](https://github.com/ravennelucas1908-max/sky-browser/releases).
+[page Releases](https://github.com/Ravenne1908/sky-browser/releases).
 
 ## Le compiler vous-même
 
@@ -72,7 +72,7 @@ Guide rapide Linux — guides complets pour [Linux](docs/build-linux.md) et
 [Windows](docs/build-windows.md). Prévoir un long build et ~40–60 Go d'espace disque.
 
 ```bash
-git clone https://github.com/ravennelucas1908-max/sky-browser.git
+git clone https://github.com/Ravenne1908/sky-browser.git
 cd sky-browser
 
 ./scripts/setup.sh          # récupère le source Firefox ESR épinglé (plusieurs Go)
@@ -130,8 +130,8 @@ Marque de Mozilla, Sky Browser retire tout branding Firefox et livre le sien
 
 ## Contribuer
 
-- 🐛 [Signaler un bug](https://github.com/ravennelucas1908-max/sky-browser/issues/new?template=bug_report.md)
-- 💡 [Proposer une fonctionnalité](https://github.com/ravennelucas1908-max/sky-browser/issues/new?template=feature_request.md)
+- 🐛 [Signaler un bug](https://github.com/Ravenne1908/sky-browser/issues/new?template=bug_report.md)
+- 💡 [Proposer une fonctionnalité](https://github.com/Ravenne1908/sky-browser/issues/new?template=feature_request.md)
 - 🔧 Lisez [CONTRIBUTING.md](CONTRIBUTING.md) pour comprendre la discipline de
   patchs qui garde ce fork maintenable.
 

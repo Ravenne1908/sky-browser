@@ -1,5 +1,5 @@
 <!-- Sky Browser — main README (English). French version: README.fr.md -->
-<!-- TODO: replace ravennelucas1908-max with your GitHub username everywhere in this file. -->
+<!-- TODO: replace Ravenne1908 with your GitHub username everywhere in this file. -->
 
 <p align="center">
   <img src="assets/logo/sky-browser-logo.svg" width="128" alt="Sky Browser logo">
@@ -67,7 +67,7 @@ release channel ([why](docs/decisions/0002-esr-channel.md)).
 ## Download
 
 Once released, installers and tarballs will live on the
-[Releases page](https://github.com/ravennelucas1908-max/sky-browser/releases).
+[Releases page](https://github.com/Ravenne1908/sky-browser/releases).
 
 ## Build it yourself
 
@@ -75,7 +75,7 @@ Linux quickstart — full guides for [Linux](docs/build-linux.md) and
 [Windows](docs/build-windows.md). Expect a long build and ~40–60 GB of disk.
 
 ```bash
-git clone https://github.com/ravennelucas1908-max/sky-browser.git
+git clone https://github.com/Ravenne1908/sky-browser.git
 cd sky-browser
 
 ./scripts/setup.sh          # fetch the pinned Firefox ESR source (several GB)
@@ -130,8 +130,8 @@ removes all Firefox branding and ships its own (see
 
 ## Contributing
 
-- 🐛 [Report a bug](https://github.com/ravennelucas1908-max/sky-browser/issues/new?template=bug_report.md)
-- 💡 [Suggest a feature](https://github.com/ravennelucas1908-max/sky-browser/issues/new?template=feature_request.md)
+- 🐛 [Report a bug](https://github.com/Ravenne1908/sky-browser/issues/new?template=bug_report.md)
+- 💡 [Suggest a feature](https://github.com/Ravenne1908/sky-browser/issues/new?template=feature_request.md)
 - 🔧 Read [CONTRIBUTING.md](CONTRIBUTING.md) for the patch discipline that
   keeps this fork easy to maintain.
 

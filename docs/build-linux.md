@@ -13,7 +13,7 @@ x86_64 distro should work — `mach bootstrap` installs the toolchain.
 ## Build
 
 ```bash
-git clone https://github.com/ravennelucas1908-max/sky-browser.git
+git clone https://github.com/Ravenne1908/sky-browser.git
 cd sky-browser
 
 ./scripts/setup.sh            # clone pinned Firefox ESR into .build/upstream
